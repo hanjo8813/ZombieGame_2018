@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\한우진\desktop\재원대학\소설기\좀비게임\</FILEPATH>
+      <FILENAME>메인.c</FILENAME>
+      <LINE>2430</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>6282</DEFECTCODE>
+    <DESCRIPTION>잘못된 연산자:  부울 컨텍스트에서 상수를 할당했습니다. 대신 '=='를 사용하세요.</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>2300</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\한우진\desktop\재원대학\소설기\좀비게임\</FILEPATH>
+      <FILENAME>메인.c</FILENAME>
+      <LINE>2440</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>반환 값이 무시되었습니다. 'getchar'.</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>2300</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
