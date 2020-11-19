@@ -42,7 +42,7 @@ int life;
 int score = 0;
 int combo = 0;
 int num_gun = 0;
-int jj = 0; //ÀåÀü
+int jj = 0; //ì¥ì „
 int num_bomb = 0;
 int keychange = 0;
 int cnt7 = 0;
@@ -108,11 +108,11 @@ void DrawStartboard(int sign)
 	for (j = 0; j < GBOARD_HEIGHT; j++) {
 		for (i = 0; i < GBOARD_WIDTH; i++) {
 			if (gamestartboard[j][i] == 1) {
-				printf("¡á");
+				printf("â– ");
 			}
 			else if (gamestartboard[j][i] == 2) {
 				SetConsoleTextAttribute(hC, 12);
-				printf("¡á");
+				printf("â– ");
 				SetConsoleTextAttribute(hC, 15);
 			}
 			else {
@@ -129,24 +129,24 @@ void DrawStartboard(int sign)
 	if (character == 0)
 	{
 		SetConsoleTextAttribute(hC, 14);
-		printf("¡Ü\n\n");
+		printf("â—\n\n");
 		SetConsoleTextAttribute(hC, 15);
 	}
 	if (character == 1)
 	{
 		SetConsoleTextAttribute(hC, 14);
-		printf("¢¼\n\n");
+		printf("â™ \n\n");
 		SetConsoleTextAttribute(hC, 15);
 	}
 	if (character == 2)
 	{
 		SetConsoleTextAttribute(hC, 14);
-		printf("¢À\n\n");
+		printf("â™£\n\n");
 		SetConsoleTextAttribute(hC, 15);
 	}
-	printf("\t\t\t  ¨ç   S  T  A  R  T\n\n");
-	printf("\t\t\t  ¨è   °Ô  ÀÓ  ¼³  ¸í\n\n");
-	printf("\t\t\t¨é   Ä³  ¸¯  ÅÍ  ¼³  Á¤\n\n");
+	printf("\t\t\t  â‘    S  T  A  R  T\n\n");
+	printf("\t\t\t  â‘¡   ê²Œ  ì„  ì„¤  ëª…\n\n");
+	printf("\t\t\tâ‘¢   ìº  ë¦­  í„°  ì„¤  ì •\n\n");
 
 	while (1)
 	{
@@ -179,11 +179,11 @@ void DrawExplainboard(int sign)
 	int key;
 
 	system("cls");
-	printf("\n    <°ÔÀÓ ¸ñÀû>\n    60ÃÊ ³»¿¡ NPC¸¦ ÇÇÇØ ¿À¿°µÈ ¶¥À» ¸ğµÎ Á¤È­ÇÏ´Â °Í\n\n");
-	printf("    <°ÔÀÓ ±âº» ±ÔÄ¢>\n    ¸ñ¼û 3°³, NPC¿Í ºÎµúÈ÷¸é ¸ñ¼ûÀÌ 1°³ »ç¶óÁü\n    ½ºÅ×ÀÌÁö¿¡¼­ ³²Àº ½Ã°£Àº 1ÃÊ´ç 100Á¡ ¾¿ Á¡¼ö¸¦ ¾òÀ½\n    ½ºÅ×ÀÌÁö¿¡¼­ Á¤È­½ÃÅ² ¶¥Àº ¶¥ÀÇ ÇÑ Ä­´ç 50Á¡ ¾¿ Á¡¼ö¸¦ ¾òÀ½\n\n");
-	printf("    <NPC>\n    Á»ºñ ¡ã : ¾Æ¹« ±â´É ¾øÀÌ Æ¯Á¤ ±¸¿ª¸¸ ¹İº¹ÇØ¼­ ¿òÁ÷ÀÓ\n    Á»ºñ ¡á : ¾Æ¹« ±â´É ¾øÀÌ ¸Ê ÀüÃ¼¸¦ ¿òÁ÷ÀÓ\n    Á»ºñ ¡ß : ¶¥À» ¿À¿°½ÃÅ°¸é¼­ ¸Ê ÀüÃ¼¸¦ ¿òÁ÷ÀÓ\n    Á»ºñ ¢Â : ³ª¸¦ ÃßÀûÇÏ¸é¼­ ¸Ê ÀüÃ¼¸¦ ¿òÁ÷ÀÓ\n\n");
-	printf("    <¾ÆÀÌÅÛ>\n    ¶¥À» Á¤È­½ÃÅ°¸é ·£´ıÀ¸·Î ¾ÆÀÌÅÛÀÌ ³ª¿È\n    - Á¾·ù\n    ½Ã°£ Áõ°¡ ¾ÆÀÌÅÛ : ½ºÅ×ÀÌÁö ½Ã°£ 10ÃÊ Áõ°¡\n    ¸ñ¼û Áõ°¡ ¾ÆÀÌÅÛ : ¸ñ¼û 1°³ Áõ°¡\n    ÃÑ ¾ÆÀÌÅÛ : ½ºÆäÀÌ½º ¹Ù¸¦ ´©¸£°í ¿øÇÏ´Â ¹æÇâÀÇ ¹æÇâÅ°¸¦ ´©¸£¸é ÃÑÀ» ½÷¼­ NPC¸¦ Á×ÀÏ ¼ö ÀÖ´Â ¾ÆÀÌÅÛ\n    ¹æÇâÅ° ÀüÈ¯ ¾ÆÀÌÅÛ : 7ÃÊµ¿¾È PCÀÇ ¹æÇâÅ°°¡ »óÇÏ, ÁÂ¿ì°¡ ¹Ù²ñ\n\n\n");
-	printf("    1 ´©¸£¸é °ÔÀÓ½ÃÀÛ \n\n    2 ´©¸£¸é ½ÃÀÛÈ­¸é");
+	printf("\n    <ê²Œì„ ëª©ì >\n    60ì´ˆ ë‚´ì— NPCë¥¼ í”¼í•´ ì˜¤ì—¼ëœ ë•…ì„ ëª¨ë‘ ì •í™”í•˜ëŠ” ê²ƒ\n\n");
+	printf("    <ê²Œì„ ê¸°ë³¸ ê·œì¹™>\n    ëª©ìˆ¨ 3ê°œ, NPCì™€ ë¶€ë”ªíˆë©´ ëª©ìˆ¨ì´ 1ê°œ ì‚¬ë¼ì§\n    ìŠ¤í…Œì´ì§€ì—ì„œ ë‚¨ì€ ì‹œê°„ì€ 1ì´ˆë‹¹ 100ì  ì”© ì ìˆ˜ë¥¼ ì–»ìŒ\n    ìŠ¤í…Œì´ì§€ì—ì„œ ì •í™”ì‹œí‚¨ ë•…ì€ ë•…ì˜ í•œ ì¹¸ë‹¹ 50ì  ì”© ì ìˆ˜ë¥¼ ì–»ìŒ\n\n");
+	printf("    <NPC>\n    ì¢€ë¹„ â–² : ì•„ë¬´ ê¸°ëŠ¥ ì—†ì´ íŠ¹ì • êµ¬ì—­ë§Œ ë°˜ë³µí•´ì„œ ì›€ì§ì„\n    ì¢€ë¹„ â–  : ì•„ë¬´ ê¸°ëŠ¥ ì—†ì´ ë§µ ì „ì²´ë¥¼ ì›€ì§ì„\n    ì¢€ë¹„ â—† : ë•…ì„ ì˜¤ì—¼ì‹œí‚¤ë©´ì„œ ë§µ ì „ì²´ë¥¼ ì›€ì§ì„\n    ì¢€ë¹„ â—ˆ : ë‚˜ë¥¼ ì¶”ì í•˜ë©´ì„œ ë§µ ì „ì²´ë¥¼ ì›€ì§ì„\n\n");
+	printf("    <ì•„ì´í…œ>\n    ë•…ì„ ì •í™”ì‹œí‚¤ë©´ ëœë¤ìœ¼ë¡œ ì•„ì´í…œì´ ë‚˜ì˜´\n    - ì¢…ë¥˜\n    ì‹œê°„ ì¦ê°€ ì•„ì´í…œ : ìŠ¤í…Œì´ì§€ ì‹œê°„ 10ì´ˆ ì¦ê°€\n    ëª©ìˆ¨ ì¦ê°€ ì•„ì´í…œ : ëª©ìˆ¨ 1ê°œ ì¦ê°€\n    ì´ ì•„ì´í…œ : ìŠ¤í˜ì´ìŠ¤ ë°”ë¥¼ ëˆ„ë¥´ê³  ì›í•˜ëŠ” ë°©í–¥ì˜ ë°©í–¥í‚¤ë¥¼ ëˆ„ë¥´ë©´ ì´ì„ ì´ì„œ NPCë¥¼ ì£½ì¼ ìˆ˜ ìˆëŠ” ì•„ì´í…œ\n    ë°©í–¥í‚¤ ì „í™˜ ì•„ì´í…œ : 7ì´ˆë™ì•ˆ PCì˜ ë°©í–¥í‚¤ê°€ ìƒí•˜, ì¢Œìš°ê°€ ë°”ë€œ\n\n\n");
+	printf("    1 ëˆ„ë¥´ë©´ ê²Œì„ì‹œì‘ \n\n    2 ëˆ„ë¥´ë©´ ì‹œì‘í™”ë©´");
 
 	while (1)
 	{
@@ -215,19 +215,19 @@ void DrawCharacterboard(int sign)
 	system("cls");
 
 	SetConsoleTextAttribute(hC, 14);
-	printf("\n   ¡Ü");
+	printf("\n   â—");
 	SetConsoleTextAttribute(hC, 15);
-	printf("   < ¹æÇâÅ° ÀÔ·Â\n\n");
+	printf("   < ë°©í–¥í‚¤ ì…ë ¥\n\n");
 	SetConsoleTextAttribute(hC, 14);
-	printf("   ¢¼");
+	printf("   â™ ");
 	SetConsoleTextAttribute(hC, 15);
-	printf("   > ¹æÇâÅ° ÀÔ·Â\n\n");
+	printf("   > ë°©í–¥í‚¤ ì…ë ¥\n\n");
 	SetConsoleTextAttribute(hC, 14);
-	printf("   ¢À");
+	printf("   â™£");
 	SetConsoleTextAttribute(hC, 15);
-	printf("   £Ş ¹æÇâÅ° ÀÔ·Â\n\n");
+	printf("   ï¼¾ ë°©í–¥í‚¤ ì…ë ¥\n\n");
 
-	printf("\n    1 ´©¸£¸é °ÔÀÓ½ÃÀÛ \n\n    2 ´©¸£¸é ½ÃÀÛÈ­¸é");
+	printf("\n    1 ëˆ„ë¥´ë©´ ê²Œì„ì‹œì‘ \n\n    2 ëˆ„ë¥´ë©´ ì‹œì‘í™”ë©´");
 
 	while (1)
 	{
@@ -264,16 +264,16 @@ void DrawCharacterboard(int sign)
 void printstory()
 {
 	system("cls");
-	PlaySound(TEXT("Å°º¸µå.wav"), NULL, SND_ASYNC);
+	PlaySound(TEXT("í‚¤ë³´ë“œ.wav"), NULL, SND_ASYNC);
 	char story[8][150] = {
-	{"                    < °Ô ÀÓ  ½Ã ³ª ¸® ¿À >" },
+	{"                    < ê²Œ ì„  ì‹œ ë‚˜ ë¦¬ ì˜¤ >" },
 	{" "},
-	{ "      ÀÎ°£ÀÇ °úµµÇÑ À¯ÀüÀÚ Á¶ÀÛÀ¸·Î Áö±¸¿¡´Â Á»ºñ°¡ ³ªÅ¸³µ´Ù!" },
-	{ "            ÀÌ ¶§¹®¿¡ ¸¹Àº »ç¶÷µéÀº Á»ºñ°¡ µÇ¾ú°í," },
-	{ "Áö±¸¸¦ ±¸ÇÏ±â À§ÇØ¼­´Â ³²Àº »ç¶÷µéÀÌ Á»ºñ ¹ÙÀÌ·¯½º¸¦ Á¤È­½ÃÄÑ¾ß ÇÑ´Ù." },
-	{ "             ÇÏÁö¸¸ µ¹¾Æ¿Â »ç¶÷Àº ¾Æ¹«µµ ¾ø¾ú´Ù." },
-	{ "               ¸ğµÎ µÎ·Á¿ò¿¡ ¶³°í ÀÖ´Â »óÈ²..." },
-	{ "        ´ç½ÅÀÌ Á»ºñ ¹ÙÀÌ·¯½º¸¦ Á¤È­½ÃÅ°·¯ °¡½Ã°Ú½À´Ï±î?" },
+	{ "      ì¸ê°„ì˜ ê³¼ë„í•œ ìœ ì „ì ì¡°ì‘ìœ¼ë¡œ ì§€êµ¬ì—ëŠ” ì¢€ë¹„ê°€ ë‚˜íƒ€ë‚¬ë‹¤!" },
+	{ "            ì´ ë•Œë¬¸ì— ë§ì€ ì‚¬ëŒë“¤ì€ ì¢€ë¹„ê°€ ë˜ì—ˆê³ ," },
+	{ "ì§€êµ¬ë¥¼ êµ¬í•˜ê¸° ìœ„í•´ì„œëŠ” ë‚¨ì€ ì‚¬ëŒë“¤ì´ ì¢€ë¹„ ë°”ì´ëŸ¬ìŠ¤ë¥¼ ì •í™”ì‹œì¼œì•¼ í•œë‹¤." },
+	{ "             í•˜ì§€ë§Œ ëŒì•„ì˜¨ ì‚¬ëŒì€ ì•„ë¬´ë„ ì—†ì—ˆë‹¤." },
+	{ "               ëª¨ë‘ ë‘ë ¤ì›€ì— ë–¨ê³  ìˆëŠ” ìƒí™©..." },
+	{ "        ë‹¹ì‹ ì´ ì¢€ë¹„ ë°”ì´ëŸ¬ìŠ¤ë¥¼ ì •í™”ì‹œí‚¤ëŸ¬ ê°€ì‹œê² ìŠµë‹ˆê¹Œ?" },
 	};
 
 	int x = 4;
@@ -287,7 +287,7 @@ void printstory()
 
 		if (i == 1) {
 			SetCurrentCursorPos(x, 25);
-			printf("                ½ÃÀÛÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À");
+			printf("                ì‹œì‘í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤");
 			SetCurrentCursorPos(x, y + 2 * i);
 		}
 
@@ -315,7 +315,7 @@ void DrawStage()
 	{
 		for (i = 0; i < GBOARD_WIDTH; i++)
 		{
-			if (stagemap[stage][j][i] == 0) // ºó°ø°£
+			if (stagemap[stage][j][i] == 0) // ë¹ˆê³µê°„
 			{
 				SetCurrentCursorPos(i * 2, j);
 				printf(" ");
@@ -324,44 +324,44 @@ void DrawStage()
 			{
 				SetCurrentCursorPos(i * 2, j);
 				SetConsoleTextAttribute(hC, 10);
-				printf("¡á");
+				printf("â– ");
 				SetConsoleTextAttribute(hC, 15);
 			}
-			else if (stagemap[stage][j][i] == 1) // º®
+			else if (stagemap[stage][j][i] == 1) // ë²½
 			{
 				SetCurrentCursorPos(i * 2, j);
 				SetConsoleTextAttribute(hC, 15);
-				printf("¢Æ");
+				printf("â–’");
 			}
-			else if (stagemap[stage][j][i] == 2)  // Á¤È­µÇ±âÀü ¶¥
+			else if (stagemap[stage][j][i] == 2)  // ì •í™”ë˜ê¸°ì „ ë•…
 			{
 				SetCurrentCursorPos(i * 2, j);
 				SetConsoleTextAttribute(hC, 15);
-				printf("¡á");
+				printf("â– ");
 			}
-			else if (stagemap[stage][j][i] == 3) // ¹ÙÀÌ·¯½º
+			else if (stagemap[stage][j][i] == 3) // ë°”ì´ëŸ¬ìŠ¤
 			{
 				SetCurrentCursorPos(i * 2, j);
 				SetConsoleTextAttribute(hC, 8);
-				printf("¡Û");
+				printf("â—‹");
 			}
-			else if (stagemap[stage][j][i] == 5) // ÆøÅº
+			else if (stagemap[stage][j][i] == 5) // í­íƒ„
 			{
 				SetCurrentCursorPos(i * 2, j);
 				SetConsoleTextAttribute(hC, 6);
-				printf("¢Ä");
+				printf("â—");
 			}
-			else if (stagemap[stage][j][i] == 6) // ¹®
+			else if (stagemap[stage][j][i] == 6) // ë¬¸
 			{
 				SetCurrentCursorPos(i * 2, j);
 				SetConsoleTextAttribute(hC, 5);
-				printf("¢Ë");
+				printf("â–¦");
 			}
-			else if (stagemap[stage][j][i] == 8) // Æ÷Å»
+			else if (stagemap[stage][j][i] == 8) // í¬íƒˆ
 			{
 				SetCurrentCursorPos(i * 2, j);
 				SetConsoleTextAttribute(hC, 9);
-				printf("£À");
+				printf("ï¼ ");
 			}
 		}
 	}
@@ -383,28 +383,28 @@ void DrawUIBoard()
 	{
 		SetCurrentCursorPos(72, y);
 		SetConsoleTextAttribute(hC, 15);
-		printf("¢Æ");
+		printf("â–’");
 	}
 
 	for (x = 72; x <= 102; x += 2)
 	{
 		SetCurrentCursorPos(x, 0);
 		SetConsoleTextAttribute(hC, 15);
-		printf("¢Æ");
+		printf("â–’");
 	}
 
 	for (y = 1; y <= 29; y++)
 	{
 		SetCurrentCursorPos(102, y);
 		SetConsoleTextAttribute(hC, 15);
-		printf("¢Æ");
+		printf("â–’");
 	}
 
 	for (x = 72; x <= 102; x += 2)
 	{
 		SetCurrentCursorPos(x, 29);
 		SetConsoleTextAttribute(hC, 15);
-		printf("¢Æ");
+		printf("â–’");
 	}
 }
 
@@ -421,7 +421,7 @@ void UI_TimeLimit()
 	consume_t = stagetime - consume_t;
 
 	SetCurrentCursorPos(76, 5);
-	printf("< ³²Àº ½Ã°£ >");
+	printf("< ë‚¨ì€ ì‹œê°„ >");
 
 	if (consume_t >= 0)
 	{
@@ -438,11 +438,11 @@ void UI_TimeLimit()
 void UI_Score()
 {
 	SetCurrentCursorPos(76, 11);
-	printf("< Á¡¼ö >");
+	printf("< ì ìˆ˜ >");
 	SetCurrentCursorPos(76, 13);
 	printf("COMBO : %d", combo);
 	SetCurrentCursorPos(76, 15);
-	printf("ÇöÀçÁ¡¼ö : %d", score);
+	printf("í˜„ì¬ì ìˆ˜ : %d", score);
 	SetCurrentCursorPos(76, 17);
 	printf("------------------------");
 }
@@ -452,7 +452,7 @@ void UI_Life()
 	HANDLE hC = GetStdHandle(STD_OUTPUT_HANDLE);
 
 	SetCurrentCursorPos(76, 19);
-	printf("< ÇöÀç¸ñ¼û >");
+	printf("< í˜„ì¬ëª©ìˆ¨ >");
 	SetCurrentCursorPos(76, 21);
 	SetConsoleTextAttribute(hC, 12);
 
@@ -462,19 +462,19 @@ void UI_Life()
 	}
 
 	if (life == 5) {
-		printf("¢¾¢¾¢¾¢¾¢¾");
+		printf("â™¥â™¥â™¥â™¥â™¥");
 	}
 	if (life == 4) {
-		printf("¢¾¢¾¢¾¢¾¢½");
+		printf("â™¥â™¥â™¥â™¥â™¡");
 	}
 	if (life == 3) {
-		printf("¢¾¢¾¢¾¢½¢½");
+		printf("â™¥â™¥â™¥â™¡â™¡");
 	}
 	if (life == 2) {
-		printf("¢¾¢¾¢½¢½¢½");
+		printf("â™¥â™¥â™¡â™¡â™¡");
 	}
 	if (life == 1) {
-		printf("¢¾¢½¢½¢½¢½");
+		printf("â™¥â™¡â™¡â™¡â™¡");
 	}
 	SetConsoleTextAttribute(hC, 15);
 	SetCurrentCursorPos(76, 23);
@@ -488,13 +488,13 @@ void UI_Gun()
 	SetConsoleTextAttribute(hC, 10);
 	printf("( Q )");
 	SetConsoleTextAttribute(hC, 15);
-	printf(" ÃÑ¾Ë °³¼ö : %d", num_gun);
+	printf(" ì´ì•Œ ê°œìˆ˜ : %d", num_gun);
 
 	SetCurrentCursorPos(76, 27);
 	SetConsoleTextAttribute(hC, 10);
 	printf("( W )");
 	SetConsoleTextAttribute(hC, 15);
-	printf(" ÆøÅº °³¼ö : %d", num_bomb);
+	printf(" í­íƒ„ ê°œìˆ˜ : %d", num_bomb);
 
 }
 
@@ -515,32 +515,32 @@ void DrawMessage()
 	for (x = 16; x <= 52; x += 2)
 	{
 		SetCurrentCursorPos(x, 23);
-		printf("¦¡");
+		printf("â”€");
 	}
 	for (x = 16; x <= 52; x += 2)
 	{
 		SetCurrentCursorPos(x, 29);
-		printf("¦¡");
+		printf("â”€");
 	}
 	for (y = 24; y <= 28; y++)
 	{
 		SetCurrentCursorPos(16, y);
-		printf("¦¢");
+		printf("â”‚");
 	}
 	for (y = 24; y <= 28; y++)
 	{
 		SetCurrentCursorPos(52, y);
-		printf("¦¢");
+		printf("â”‚");
 	}
 
 	SetCurrentCursorPos(16, 23);
-	printf("¦£");
+	printf("â”Œ");
 	SetCurrentCursorPos(52, 23);
-	printf("¦¤");
+	printf("â”");
 	SetCurrentCursorPos(16, 29);
-	printf("¦¦");
+	printf("â””");
 	SetCurrentCursorPos(52, 29);
-	printf("¦¥");
+	printf("â”˜");
 }
 
 void DeleteMessage1()
@@ -589,7 +589,7 @@ void PrintClear()
 	for (j = 0; j < GBOARD_HEIGHT; j++) {
 		for (i = 0; i < GBOARD_WIDTH; i++) {
 			if (gameclearboard[j][i] == 1) {
-				printf("¡á");
+				printf("â– ");
 			}
 			else {
 				printf("  ");
@@ -612,16 +612,16 @@ void GameClear()
 
 	char story[9][150] =
 	{
-	{ " Á»ºñ ¹ÙÀÌ·¯½º°¡ ¸ğµÎ Á¦°ÅµÇ¾ú´Ù .... !" },
+	{ " ì¢€ë¹„ ë°”ì´ëŸ¬ìŠ¤ê°€ ëª¨ë‘ ì œê±°ë˜ì—ˆë‹¤ .... !" },
 	{" ....."},
 	{" ....."},
 
-	{ " ÇÍºûÀ¸·Î ¹°µé¾ú´ø ¿Â ¼¼»óÀº ´Ù½Ã µ¹¾Æ¿À°í" },
-	{ " »ç¶÷µéÀº ´Ù½Ã Çàº¹ÇÑ »îÀ» µÇÃ£¾Ò´Ù" },
+	{ " í•ë¹›ìœ¼ë¡œ ë¬¼ë“¤ì—ˆë˜ ì˜¨ ì„¸ìƒì€ ë‹¤ì‹œ ëŒì•„ì˜¤ê³ " },
+	{ " ì‚¬ëŒë“¤ì€ ë‹¤ì‹œ í–‰ë³µí•œ ì‚¶ì„ ë˜ì°¾ì•˜ë‹¤" },
 	{" ....."},
 	{" ....."},
 	{" ....."},
-	{ " ³ª´Â ¿µ¿õÀÌ´Ù...! " }
+	{ " ë‚˜ëŠ” ì˜ì›…ì´ë‹¤...! " }
 	};
 
 	int x = 4;
@@ -641,9 +641,9 @@ void GameClear()
 	}
 
 	SetConsoleTextAttribute(hC, 14);
-	printf("\n\n\n\n\t ÃÖ  Á¾  Á¡  ¼ö  :  %d", score);
+	printf("\n\n\n\n\t ìµœ  ì¢…  ì   ìˆ˜  :  %d", score);
 	SetConsoleTextAttribute(hC, 15);
-	printf("\n\n\n      ½ÃÀÛÈ­¸éÀ¸·Î °¡·Á¸é 1¹øÀ» ´©¸£½Ã¿À");
+	printf("\n\n\n      ì‹œì‘í™”ë©´ìœ¼ë¡œ ê°€ë ¤ë©´ 1ë²ˆì„ ëˆ„ë¥´ì‹œì˜¤");
 
 	while (1)
 	{
@@ -662,7 +662,7 @@ void GameClear()
 
 void GameOver()
 {
-	PlaySound(TEXT("°ÔÀÓ¿À¹ö.wav"), NULL, SND_ASYNC);
+	PlaySound(TEXT("ê²Œì„ì˜¤ë²„.wav"), NULL, SND_ASYNC);
 
 	system("cls");
 
@@ -672,7 +672,7 @@ void GameOver()
 	for (j = 0; j < GBOARD_HEIGHT - 5; j++) {
 		for (i = 0; i < GBOARD_WIDTH; i++) {
 			if (gameoverboard[j][i] == 1) {
-				printf("¡á");
+				printf("â– ");
 			}
 			else {
 				printf("  ");
@@ -681,7 +681,7 @@ void GameOver()
 		printf("\n");
 	}
 
-	char story[70] = { "      °á±¹ ¼¼»óÀº Á»ºñ ¹ÙÀÌ·¯½º¿¡ ÀÇÇØ ¸ê¸ÁÇÏ°í ¸»¾Ò´Ù . . . . . " };
+	char story[70] = { "      ê²°êµ­ ì„¸ìƒì€ ì¢€ë¹„ ë°”ì´ëŸ¬ìŠ¤ì— ì˜í•´ ë©¸ë§í•˜ê³  ë§ì•˜ë‹¤ . . . . . " };
 
 	for (int i = 0; i < 70; i++)
 	{
@@ -694,7 +694,7 @@ void GameOver()
 	SetConsoleTextAttribute(hC, 14);
 	printf("\n\n\n\n\t\t      S C O R E  :  %d", score);
 	SetConsoleTextAttribute(hC, 15);
-	printf("\n\n\t      ½ÃÀÛÈ­¸éÀ¸·Î °¡·Á¸é 1¹øÀ» ´©¸£½Ã¿À");
+	printf("\n\n\t      ì‹œì‘í™”ë©´ìœ¼ë¡œ ê°€ë ¤ë©´ 1ë²ˆì„ ëˆ„ë¥´ì‹œì˜¤");
 
 	while (1)
 	{
@@ -732,7 +732,7 @@ void PC_Bomb_Collision()
 		ShowPC();
 		gameBoardInfo[curPosY][curPosX / 2] = 0;
 		SetCurrentCursorPos(20, 26);
-		printf("ÆøÅºÀ» ¹â¾Æ¼­ ¸ñ¼ûÀÌ ÁÙ¾ú´Ù.  ");
+		printf("í­íƒ„ì„ ë°Ÿì•„ì„œ ëª©ìˆ¨ì´ ì¤„ì—ˆë‹¤.  ");
 		Sleep(150);
 	}
 }
@@ -756,7 +756,7 @@ void NPC_Bomb_Collision()
 			curPosY_ANPC[a] = 20;
 			SetCurrentCursorPos(curPosX_ANPC[a], curPosY_ANPC[a]);
 			SetCurrentCursorPos(20, 26);
-			printf("NPC°¡ ÆøÅºÀ» ¹â¾Ò´Ù!!      ");
+			printf("NPCê°€ í­íƒ„ì„ ë°Ÿì•˜ë‹¤!!      ");
 			Sleep(150);
 			//   Delete_ANPC(a);
 		}
@@ -774,7 +774,7 @@ void NPC_Bomb_Collision()
 			SetCurrentCursorPos(curPosX_BNPC[b], curPosY_BNPC[b]);
 			Delete_BNPC(b);
 			SetCurrentCursorPos(20, 26);
-			printf("NPC°¡ ÆøÅºÀ» ¹â¾Ò´Ù!!      ");
+			printf("NPCê°€ í­íƒ„ì„ ë°Ÿì•˜ë‹¤!!      ");
 			Sleep(150);
 		}
 
@@ -792,7 +792,7 @@ void NPC_Bomb_Collision()
 			SetCurrentCursorPos(curPosX_CNPC[c], curPosY_CNPC[c]);
 			Delete_CNPC(c);
 			SetCurrentCursorPos(20, 26);
-			printf("NPC°¡ ÆøÅºÀ» ¹â¾Ò´Ù!!      ");
+			printf("NPCê°€ í­íƒ„ì„ ë°Ÿì•˜ë‹¤!!      ");
 			Sleep(150);
 		}
 
@@ -810,7 +810,7 @@ void NPC_Bomb_Collision()
 			SetCurrentCursorPos(curPosX_DNPC[d], curPosY_DNPC[d]);
 			Delete_DNPC(d);
 			SetCurrentCursorPos(20, 26);
-			printf("NPC°¡ ÆøÅºÀ» ¹â¾Ò´Ù!!      ");
+			printf("NPCê°€ í­íƒ„ì„ ë°Ÿì•˜ë‹¤!!      ");
 			Sleep(150);
 		}
 
@@ -825,7 +825,7 @@ void PC_NPC_Collision()
 		{
 			life--;
 			SetCurrentCursorPos(20, 26);
-			printf("¾Ñ Á¶½ÉÇØ! ¸ñ¼ûÀÌ ÁÙ¾îµé¾ú´Ù!");
+			printf("ì•— ì¡°ì‹¬í•´! ëª©ìˆ¨ì´ ì¤„ì–´ë“¤ì—ˆë‹¤!");
 		}
 	}
 	for (int b = 0; b < 5; b++)
@@ -834,7 +834,7 @@ void PC_NPC_Collision()
 		{
 			life--;
 			SetCurrentCursorPos(20, 26);
-			printf("¾Ñ Á¶½ÉÇØ! ¸ñ¼ûÀÌ ÁÙ¾îµé¾ú´Ù!");
+			printf("ì•— ì¡°ì‹¬í•´! ëª©ìˆ¨ì´ ì¤„ì–´ë“¤ì—ˆë‹¤!");
 		}
 	}
 	for (int c = 0; c < 5; c++)
@@ -842,7 +842,7 @@ void PC_NPC_Collision()
 		if (curPosX == curPosX_CNPC[c] && curPosY == curPosY_CNPC[c])
 		{
 			SetCurrentCursorPos(20, 26);
-			printf("¾Ñ Á¶½ÉÇØ! ¸ñ¼ûÀÌ ÁÙ¾îµé¾ú´Ù!");
+			printf("ì•— ì¡°ì‹¬í•´! ëª©ìˆ¨ì´ ì¤„ì–´ë“¤ì—ˆë‹¤!");
 			life--;
 		}
 	}
@@ -852,7 +852,7 @@ void PC_NPC_Collision()
 		{
 			life--;
 			SetCurrentCursorPos(20, 26);
-			printf("¾Ñ Á¶½ÉÇØ! ¸ñ¼ûÀÌ ÁÙ¾îµé¾ú´Ù!");
+			printf("ì•— ì¡°ì‹¬í•´! ëª©ìˆ¨ì´ ì¤„ì–´ë“¤ì—ˆë‹¤!");
 		}
 	}
 }
@@ -866,13 +866,13 @@ void ShowPC()
 		if (jj == 0)
 		{
 			SetConsoleTextAttribute(hC, 14);
-			printf("¡Ü");
+			printf("â—");
 			SetConsoleTextAttribute(hC, 15);
 		}
 		else
 		{
 			SetConsoleTextAttribute(hC, 11);
-			printf("¡Ü");
+			printf("â—");
 			SetConsoleTextAttribute(hC, 15);
 		}
 	}
@@ -881,13 +881,13 @@ void ShowPC()
 		if (jj == 0)
 		{
 			SetConsoleTextAttribute(hC, 14);
-			printf("¢¼");
+			printf("â™ ");
 			SetConsoleTextAttribute(hC, 15);
 		}
 		else
 		{
 			SetConsoleTextAttribute(hC, 11);
-			printf("¢¼");
+			printf("â™ ");
 			SetConsoleTextAttribute(hC, 15);
 		}
 	}
@@ -896,13 +896,13 @@ void ShowPC()
 		if (jj == 0)
 		{
 			SetConsoleTextAttribute(hC, 14);
-			printf("¢À");
+			printf("â™£");
 			SetConsoleTextAttribute(hC, 15);
 		}
 		else
 		{
 			SetConsoleTextAttribute(hC, 11);
-			printf("¢À");
+			printf("â™£");
 			SetConsoleTextAttribute(hC, 15);
 		}
 	}
@@ -914,7 +914,7 @@ void DeletePC()
 	HANDLE hC = GetStdHandle(STD_OUTPUT_HANDLE);
 
 	SetCurrentCursorPos(curPosX, curPosY);
-	if (gameBoardInfo[curPosY][curPosX / 2] == 3 || gameBoardInfo[curPosY][curPosX / 2] == 7) // PC ÀÌµ¿ÇÒ ¶§ gameBoardInfo¿¡ 0 ÀúÀå
+	if (gameBoardInfo[curPosY][curPosX / 2] == 3 || gameBoardInfo[curPosY][curPosX / 2] == 7) // PC ì´ë™í•  ë•Œ gameBoardInfoì— 0 ì €ì¥
 		gameBoardInfo[curPosY][curPosX / 2] = 0;
 
 	if (gameBoardInfo[curPosY][curPosX / 2] == 8 || gameBoardInfo[curPosY][curPosX / 2] == 5)
@@ -922,13 +922,13 @@ void DeletePC()
 		if (gameBoardInfo[curPosY][curPosX / 2] == 8)
 		{
 			SetConsoleTextAttribute(hC, 9);
-			printf("£À");
+			printf("ï¼ ");
 			SetConsoleTextAttribute(hC, 15);
 		}
 		if (gameBoardInfo[curPosY][curPosX / 2] == 5)
 		{
 			SetConsoleTextAttribute(hC, 6);
-			printf("¢Ä");
+			printf("â—");
 			SetConsoleTextAttribute(hC, 15);
 		}
 	}
@@ -946,7 +946,7 @@ void MoveUp_PC()
 	if (DetectCollision(curPosX, curPosY - 1) == 2)
 	{
 		SetCurrentCursorPos(20, 26);
-		printf("ÃÑÀ¸·Î º®À» ¶ÕÀ»¼ö ÀÖÀ»°Í °°´Ù");
+		printf("ì´ìœ¼ë¡œ ë²½ì„ ëš«ì„ìˆ˜ ìˆì„ê²ƒ ê°™ë‹¤");
 		return;
 	}
 
@@ -963,7 +963,7 @@ void MoveDown_PC()
 	if (DetectCollision(curPosX, curPosY + 1) == 2)
 	{
 		SetCurrentCursorPos(20, 26);
-		printf("ÃÑÀ¸·Î º®À» ¶ÕÀ»¼ö ÀÖÀ»°Í °°´Ù");
+		printf("ì´ìœ¼ë¡œ ë²½ì„ ëš«ì„ìˆ˜ ìˆì„ê²ƒ ê°™ë‹¤");
 		return;
 	}
 	DeletePC();
@@ -979,7 +979,7 @@ void MoveLeft_PC()
 	if (DetectCollision(curPosX - 2, curPosY) == 2)
 	{
 		SetCurrentCursorPos(20, 26);
-		printf("ÃÑÀ¸·Î º®À» ¶ÕÀ»¼ö ÀÖÀ»°Í °°´Ù");
+		printf("ì´ìœ¼ë¡œ ë²½ì„ ëš«ì„ìˆ˜ ìˆì„ê²ƒ ê°™ë‹¤");
 		return;
 	}
 	DeletePC();
@@ -995,7 +995,7 @@ void MoveRight_PC()
 	if (DetectCollision(curPosX + 2, curPosY) == 2)
 	{
 		SetCurrentCursorPos(20, 26);
-		printf("ÃÑÀ¸·Î º®À» ¶ÕÀ»¼ö ÀÖÀ»°Í °°´Ù");
+		printf("ì´ìœ¼ë¡œ ë²½ì„ ëš«ì„ìˆ˜ ìˆì„ê²ƒ ê°™ë‹¤");
 		return;
 	}
 	DeletePC();
@@ -1006,7 +1006,7 @@ void MoveRight_PC()
 
 void Stage2_Open()
 {
-	//¿À¸¥ÂÊ À§ Å¬¸®¾î °Ë»ç
+	//ì˜¤ë¥¸ìª½ ìœ„ í´ë¦¬ì–´ ê²€ì‚¬
 	if (opentest == 0)
 	{
 		for (int x = 2; x < 17; x++)
@@ -1022,7 +1022,7 @@ void Stage2_Open()
 		opentest = 1;
 	}
 
-	//¿ŞÂÊ À§ Å¬¸®¾î °Ë»ç
+	//ì™¼ìª½ ìœ„ í´ë¦¬ì–´ ê²€ì‚¬
 	if (opentest == 2)
 	{
 		for (int x = 18; x < 35; x++)
@@ -1038,7 +1038,7 @@ void Stage2_Open()
 		opentest = 3;
 	}
 
-	//¿ŞÂÊ ¾Æ·¡ Å¬¸®¾î °Ë»ç
+	//ì™¼ìª½ ì•„ë˜ í´ë¦¬ì–´ ê²€ì‚¬
 	if (opentest == 4)
 	{
 		for (int x = 18; x < 35; x++)
@@ -1054,7 +1054,7 @@ void Stage2_Open()
 		opentest = 5;
 	}
 
-	// ¹®¿­¸² //
+	// ë¬¸ì—´ë¦¼ //
 	if (opentest == 1)
 	{
 		gameBoardInfo[6][17] = 0;
@@ -1089,7 +1089,7 @@ void Stage2_Open()
 
 void Portal()
 {
-	if (curPosX == 14 && curPosY == 3) // ¿ŞÂÊ À§ ÀÔ±¸
+	if (curPosX == 14 && curPosY == 3) // ì™¼ìª½ ìœ„ ì…êµ¬
 	{
 		p = 1;
 		DeletePC();
@@ -1099,7 +1099,7 @@ void Portal()
 		ShowPC();
 		return;
 	}
-	if (curPosX == 4 && curPosY == 18) // ¿ŞÂÊ ¾Æ·¡ ÀÔ±¸
+	if (curPosX == 4 && curPosY == 18) // ì™¼ìª½ ì•„ë˜ ì…êµ¬
 	{
 		p = 2;
 		DeletePC();
@@ -1109,7 +1109,7 @@ void Portal()
 		ShowPC();
 		return;
 	}
-	if (curPosX == 34 && curPosY == 16) // °¡¿îµ¥ ÀÔ±¸
+	if (curPosX == 34 && curPosY == 16) // ê°€ìš´ë° ì…êµ¬
 	{
 		p = 3;
 		DeletePC();
@@ -1119,7 +1119,7 @@ void Portal()
 		ShowPC();
 		return;
 	}
-	if (curPosX == 58 && curPosY == 3) // ¿À¸¥ÂÊ À§ ÀÔ±¸
+	if (curPosX == 58 && curPosY == 3) // ì˜¤ë¥¸ìª½ ìœ„ ì…êµ¬
 	{
 		p = 4;
 		DeletePC();
@@ -1129,7 +1129,7 @@ void Portal()
 		ShowPC();
 		return;
 	}
-	if (curPosX == 66 && curPosY == 17) // ¿À¸¥ÂÊ ¾Æ·¡ ÀÔ±¸
+	if (curPosX == 66 && curPosY == 17) // ì˜¤ë¥¸ìª½ ì•„ë˜ ì…êµ¬
 	{
 		p = 5;
 		DeletePC();
@@ -1140,7 +1140,7 @@ void Portal()
 		return;
 	}
 
-	// Ãâ±¸
+	// ì¶œêµ¬
 	if (p == 1)
 	{
 		if (curPosX == 66 && curPosY == 20)
@@ -1205,7 +1205,7 @@ void Show_ANPC(int n)
 	HANDLE hC = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetCurrentCursorPos(curPosX_ANPC[n], curPosY_ANPC[n]);
 	SetConsoleTextAttribute(hC, 12);
-	printf("¡ã");
+	printf("â–²");
 	SetConsoleTextAttribute(hC, 15);
 	SetCurrentCursorPos(curPosX_ANPC[n], curPosY_ANPC[n]);
 }
@@ -1222,7 +1222,7 @@ void Delete_ANPC(int n)
 	if (gameBoardInfo[curPosY_ANPC[n]][curPosX_ANPC[n] / 2] == 3)
 	{
 		SetConsoleTextAttribute(hC, 8);
-		printf("¡Û");
+		printf("â—‹");
 		SetConsoleTextAttribute(hC, 15);
 	}
 
@@ -1394,7 +1394,7 @@ void Show_BNPC(int n)
 	HANDLE hC = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetCurrentCursorPos(curPosX_BNPC[n], curPosY_BNPC[n]);
 	SetConsoleTextAttribute(hC, 12);
-	printf("¡á");
+	printf("â– ");
 	SetConsoleTextAttribute(hC, 15);
 	SetCurrentCursorPos(curPosX_BNPC[n], curPosY_BNPC[n]);
 }
@@ -1410,7 +1410,7 @@ void Delete_BNPC(int n)
 	if (gameBoardInfo[curPosY_BNPC[n]][curPosX_BNPC[n] / 2] == 3)
 	{
 		SetConsoleTextAttribute(hC, 8);
-		printf("¡Û");
+		printf("â—‹");
 		SetConsoleTextAttribute(hC, 15);
 	}
 
@@ -1487,7 +1487,7 @@ void Show_CNPC(int n)
 	HANDLE hC = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetCurrentCursorPos(curPosX_CNPC[n], curPosY_CNPC[n]);
 	SetConsoleTextAttribute(hC, 12);
-	printf("¡ß");
+	printf("â—†");
 	SetConsoleTextAttribute(hC, 15);
 	SetCurrentCursorPos(curPosX_CNPC[n], curPosY_CNPC[n]);
 }
@@ -1497,20 +1497,20 @@ void Delete_CNPC(int n)
 	HANDLE hC = GetStdHandle(STD_OUTPUT_HANDLE);
 	if (gameBoardInfo[curPosY_CNPC[n]][curPosX_CNPC[n] / 2] == 7)
 		gameBoardInfo[curPosY_CNPC[n]][curPosX_CNPC[n] / 2] = 0;
-	if (gameBoardInfo[curPosY_CNPC[n]][(curPosX_CNPC[n] - 2) / 2] == 2 ||  // ¿ŞÂÊ¿¡ ¿À¿°µÈ ¶¥ÀÌ ÀÖÀ»¶§
-		gameBoardInfo[curPosY_CNPC[n]][(curPosX_CNPC[n] + 2) / 2] == 2 ||  // ¿À¸¥ÂÊ¿¡ ¿À¿°µÈ ¶¥ÀÌ ÀÖÀ»¶§
-		gameBoardInfo[curPosY_CNPC[n] - 1][curPosX_CNPC[n] / 2] == 2 ||  // À§ÂÊ¿¡ ¿À¿°µÈ ¶¥ÀÌ ÀÖÀ»¶§ 
-		gameBoardInfo[curPosY_CNPC[n] + 1][curPosX_CNPC[n] / 2] == 2 ||  // ¾Æ·¡ÂÊ¿¡ ¿À¿°µÈ ¶¥ÀÌ ÀÖÀ»¶§
+	if (gameBoardInfo[curPosY_CNPC[n]][(curPosX_CNPC[n] - 2) / 2] == 2 ||  // ì™¼ìª½ì— ì˜¤ì—¼ëœ ë•…ì´ ìˆì„ë•Œ
+		gameBoardInfo[curPosY_CNPC[n]][(curPosX_CNPC[n] + 2) / 2] == 2 ||  // ì˜¤ë¥¸ìª½ì— ì˜¤ì—¼ëœ ë•…ì´ ìˆì„ë•Œ
+		gameBoardInfo[curPosY_CNPC[n] - 1][curPosX_CNPC[n] / 2] == 2 ||  // ìœ„ìª½ì— ì˜¤ì—¼ëœ ë•…ì´ ìˆì„ë•Œ 
+		gameBoardInfo[curPosY_CNPC[n] + 1][curPosX_CNPC[n] / 2] == 2 ||  // ì•„ë˜ìª½ì— ì˜¤ì—¼ëœ ë•…ì´ ìˆì„ë•Œ
 
-		gameBoardInfo[curPosY_CNPC[n] - 1][(curPosX_CNPC[n] - 2) / 2] == 2 ||  // ¿ŞÂÊÀ§¿¡ ¿À¿°µÈ ¶¥ÀÌ ÀÖÀ»¶§
-		gameBoardInfo[curPosY_CNPC[n] - 1][(curPosX_CNPC[n] + 2) / 2] == 2 ||  // ¿À¸¥ÂÊÀ§¿¡ ¿À¿°µÈ ¶¥ÀÌ ÀÖÀ»¶§
-		gameBoardInfo[curPosY_CNPC[n] + 1][(curPosX_CNPC[n] - 2) / 2] == 2 ||  // ¿ŞÂÊ¾Æ·¡¿¡ ¿À¿°µÈ ¶¥ÀÌ ÀÖÀ»¶§
-		gameBoardInfo[curPosY_CNPC[n] + 1][(curPosX_CNPC[n] + 2) / 2] == 2)  // ¿À¸¥ÂÊ¾Æ·¡¿¡ ¿À¿°µÈ ¶¥ÀÌ ÀÖÀ»¶§
+		gameBoardInfo[curPosY_CNPC[n] - 1][(curPosX_CNPC[n] - 2) / 2] == 2 ||  // ì™¼ìª½ìœ„ì— ì˜¤ì—¼ëœ ë•…ì´ ìˆì„ë•Œ
+		gameBoardInfo[curPosY_CNPC[n] - 1][(curPosX_CNPC[n] + 2) / 2] == 2 ||  // ì˜¤ë¥¸ìª½ìœ„ì— ì˜¤ì—¼ëœ ë•…ì´ ìˆì„ë•Œ
+		gameBoardInfo[curPosY_CNPC[n] + 1][(curPosX_CNPC[n] - 2) / 2] == 2 ||  // ì™¼ìª½ì•„ë˜ì— ì˜¤ì—¼ëœ ë•…ì´ ìˆì„ë•Œ
+		gameBoardInfo[curPosY_CNPC[n] + 1][(curPosX_CNPC[n] + 2) / 2] == 2)  // ì˜¤ë¥¸ìª½ì•„ë˜ì— ì˜¤ì—¼ëœ ë•…ì´ ìˆì„ë•Œ
 	{
 		SetCurrentCursorPos(curPosX_CNPC[n], curPosY_CNPC[n]);
-		gameBoardInfo[curPosY_CNPC[n]][curPosX_CNPC[n] / 2] = 3; // gameBoardInfo¿¡ »ı¼ºµÈ ¹ÙÀÌ·¯½º Á¤º¸ ÀúÀå
+		gameBoardInfo[curPosY_CNPC[n]][curPosX_CNPC[n] / 2] = 3; // gameBoardInfoì— ìƒì„±ëœ ë°”ì´ëŸ¬ìŠ¤ ì •ë³´ ì €ì¥
 		SetConsoleTextAttribute(hC, 8);
-		printf("¡Û");
+		printf("â—‹");
 		SetConsoleTextAttribute(hC, 15);
 		SetCurrentCursorPos(curPosX_CNPC[n], curPosY_CNPC[n]);
 	}
@@ -1591,7 +1591,7 @@ void Show_DNPC(int n)
 	HANDLE hC = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetCurrentCursorPos(curPosX_DNPC[n], curPosY_DNPC[n]);
 	SetConsoleTextAttribute(hC, 12);
-	printf("¢Â");
+	printf("â—ˆ");
 	SetConsoleTextAttribute(hC, 15);
 	SetCurrentCursorPos(curPosX_DNPC[n], curPosY_DNPC[n]);
 }
@@ -1607,7 +1607,7 @@ void Delete_DNPC(int n)
 	if (gameBoardInfo[curPosY_DNPC[n]][curPosX_DNPC[n] / 2] == 3)
 	{
 		SetConsoleTextAttribute(hC, 8);
-		printf("¡Û");
+		printf("â—‹");
 		SetConsoleTextAttribute(hC, 15);
 	}
 
@@ -1738,7 +1738,7 @@ void Delete_GUN()
 	if (gameBoardInfo[curPosY_GUN][curPosX_GUN / 2] == 3)
 	{
 		SetConsoleTextAttribute(hC, 8);
-		printf("¡Û");
+		printf("â—‹");
 		SetConsoleTextAttribute(hC, 15);
 	}
 
@@ -2032,7 +2032,7 @@ void PurifyBlock()
 			{
 				SetCurrentCursorPos(i * 2, j);
 				SetConsoleTextAttribute(hC, 10);
-				printf("¡á");
+				printf("â– ");
 				SetConsoleTextAttribute(hC, 15);
 			}
 
@@ -2040,7 +2040,7 @@ void PurifyBlock()
 			{
 				SetCurrentCursorPos(i * 2, j);
 				SetConsoleTextAttribute(hC, 3);
-				printf("¡Ú");
+				printf("â˜…");
 				SetConsoleTextAttribute(hC, 15);
 			}
 		}
@@ -2077,7 +2077,7 @@ void PurifyTest()
 				{
 					if (gameBoardInfo[k][j] == 2)
 					{
-						if (k == x2 - 1 && j == y2 - 1) // for¹®ÀÇ ¸¶Áö¸·¿¡¼­ ÄŞº¸ ¹ßµ¿
+						if (k == x2 - 1 && j == y2 - 1) // forë¬¸ì˜ ë§ˆì§€ë§‰ì—ì„œ ì½¤ë³´ ë°œë™
 						{
 							cnt7 = 0;
 							comboEnd_t = clock();
@@ -2384,17 +2384,17 @@ void ProcessKeyInput()
 		StageClearTest();
 	}
 
-	// ¾ÆÀÌÅÛ ¸ÔÀ¸¸é 3ÃÊ°£ ¸Ş¼¼Áö ¶ç¿ì±â
+	// ì•„ì´í…œ ë¨¹ìœ¼ë©´ 3ì´ˆê°„ ë©”ì„¸ì§€ ë„ìš°ê¸°
 	textE_t = clock();
 	if ((textE_t - textS_t) / 1000 >= 3)
 		DeleteMessage1();
 
-	// 5ÃÊ°£ Á»ºñ Áõ½Ä °æ°í¹® ¶ç¿ì±â
+	// 5ì´ˆê°„ ì¢€ë¹„ ì¦ì‹ ê²½ê³ ë¬¸ ë„ìš°ê¸°
 	intextE_t = clock();
 	if ((intextE_t - intextS_t) / 1000 >= 5)
 		DeleteMessage2();
 
-	// Å°¹İÀü À¯È¿½Ã°£
+	// í‚¤ë°˜ì „ ìœ íš¨ì‹œê°„
 	keyE_t = clock();
 	if ((keyE_t - keyS_t) / 1000 >= 5)
 	{
@@ -2414,39 +2414,39 @@ void What_Item()
 
 	switch (item)
 	{
-		// ½Ã°£ Áõ°¡ ¾ÆÀÌÅÛ
+		// ì‹œê°„ ì¦ê°€ ì•„ì´í…œ
 	case 0:
 		stagetime = stagetime + 10;
 		SetCurrentCursorPos(20, 26);
-		printf("½Ã°£ÀÌ 10ÃÊ Áõ°¡µÇ¾ú´Ù!       ");
+		printf("ì‹œê°„ì´ 10ì´ˆ ì¦ê°€ë˜ì—ˆë‹¤!       ");
 		break;
 
-		// ¸ñ¼û ¾ÆÀÌÅÛ
+		// ëª©ìˆ¨ ì•„ì´í…œ
 	case 1:
 		life++;
 		SetCurrentCursorPos(20, 26);
-		printf("¸ñ¼ûÀÌ ´Ã¾î³µ´Ù!              ");
+		printf("ëª©ìˆ¨ì´ ëŠ˜ì–´ë‚¬ë‹¤!              ");
 		break;
 
-		// ¹æÇâÅ° ÀüÈ¯ ¾ÆÀÌÅÛ
+		// ë°©í–¥í‚¤ ì „í™˜ ì•„ì´í…œ
 	case 2: case 3: case 4:
 		keychange = 1;
 		SetCurrentCursorPos(20, 26);
-		printf("5ÃÊ°£ ¹æÇâÅ°°¡ ÀüÈ¯µÇ¾ú´Ù!    ");
+		printf("5ì´ˆê°„ ë°©í–¥í‚¤ê°€ ì „í™˜ë˜ì—ˆë‹¤!    ");
 		break;
 
-		// ÃÑ¾Ë ¾ÆÀÌÅÛ
+		// ì´ì•Œ ì•„ì´í…œ
 	case 5: case 6: case 7:
 		gun();
 		SetCurrentCursorPos(20, 26);
-		printf("ÃÑ¾ËÀ» È¹µæÇß´Ù!               ");
+		printf("ì´ì•Œì„ íšë“í–ˆë‹¤!               ");
 		break;
 
-		// ÆøÅº ¾ÆÀÌÅÛ
+		// í­íƒ„ ì•„ì´í…œ
 	case 8: case 9:
 		bomb();
 		SetCurrentCursorPos(20, 26);
-		printf("ÆøÅºÀ» È¹µæÇß´Ù!              ");
+		printf("í­íƒ„ì„ íšë“í–ˆë‹¤!              ");
 		break;
 	}
 }
@@ -2474,7 +2474,7 @@ void IncreaseNPC(int num_BNPC, int num_CNPC, int num_DNPC)
 	now_t = clock();
 	int consume_t = (now_t - old_t) / 1000;
 	consume_t = stagetime - consume_t;
-	// ÇØ´ç ½ºÅ×ÀÌÁöÀÇ ÇöÀç½Ã°£ÀÌ consume_t
+	// í•´ë‹¹ ìŠ¤í…Œì´ì§€ì˜ í˜„ì¬ì‹œê°„ì´ consume_t
 
 	if (consume_t == increasetime)
 		in = 0;
@@ -2487,7 +2487,7 @@ void IncreaseNPC(int num_BNPC, int num_CNPC, int num_DNPC)
 		printf("< W A R N I N G >");
 		SetConsoleTextAttribute(hC, 15);
 		SetCurrentCursorPos(22, 25);
-		printf("5ÃÊ ÈÄ¿¡ Á»ºñ°¡ Áõ½ÄÇÕ´Ï´Ù");
+		printf("5ì´ˆ í›„ì— ì¢€ë¹„ê°€ ì¦ì‹í•©ë‹ˆë‹¤");
 	}
 
 	if (consume_t < increasetime)
@@ -2635,7 +2635,7 @@ void IncreaseNPC(int num_BNPC, int num_CNPC, int num_DNPC)
 			curPosY_DNPC[d] = 20;
 			Delete_DNPC(d);
 		}
-		increasetime -= 30;  // Á»ºñ°¡ Áõ½ÄÇÏ´Â ÁÖ±â(ÃÊ)
+		increasetime -= 30;  // ì¢€ë¹„ê°€ ì¦ì‹í•˜ëŠ” ì£¼ê¸°(ì´ˆ)
 	}
 }
 
@@ -2668,7 +2668,7 @@ void StageSet(int num_BNPC, int num_CNPC, int num_DNPC)
 	{
 		for (int b = 0; b < num_BNPC; b++)
 		{
-			while (1) //BNPC ½ÃÀÛÀ§Ä¡ ÁöÁ¤ÇØÁÖ´Â°Í
+			while (1) //BNPC ì‹œì‘ìœ„ì¹˜ ì§€ì •í•´ì£¼ëŠ”ê²ƒ
 			{
 				curPosX_BNPC[b] = rand() % GBOARD_WIDTH * 2;
 				curPosY_BNPC[b] = rand() % GBOARD_HEIGHT;
@@ -2680,7 +2680,7 @@ void StageSet(int num_BNPC, int num_CNPC, int num_DNPC)
 
 		for (int c = 0; c < num_CNPC; c++)
 		{
-			while (1) //CNPC ½ÃÀÛÀ§Ä¡ ÁöÁ¤ÇØÁÖ´Â°Í
+			while (1) //CNPC ì‹œì‘ìœ„ì¹˜ ì§€ì •í•´ì£¼ëŠ”ê²ƒ
 			{
 				curPosX_CNPC[c] = rand() % GBOARD_WIDTH * 2;
 				curPosY_CNPC[c] = rand() % GBOARD_HEIGHT;
@@ -2692,7 +2692,7 @@ void StageSet(int num_BNPC, int num_CNPC, int num_DNPC)
 
 		for (int d = 0; d < num_DNPC; d++)
 		{
-			while (1) //CNPC ½ÃÀÛÀ§Ä¡ ÁöÁ¤ÇØÁÖ´Â°Í
+			while (1) //CNPC ì‹œì‘ìœ„ì¹˜ ì§€ì •í•´ì£¼ëŠ”ê²ƒ
 			{
 				curPosX_DNPC[d] = rand() % GBOARD_WIDTH * 2;
 				curPosY_DNPC[d] = rand() % GBOARD_HEIGHT;
@@ -2712,17 +2712,17 @@ int main()
 	RemoveCursor();
 	printstory();
 
-	while (1) // Á¦ÀÏ Å« while ¹®
+	while (1) // ì œì¼ í° while ë¬¸
 	{
 		PlaySound(TEXT("ZHS Horror Infection.wav"), NULL, SND_ASYNC);
 		DrawStartboard(sign);
 
 		while (1)
 		{
-			PlaySound(TEXT("¸¶ÀÌ¾î½º Ãß°İÀ½.wav"), NULL, SND_ASYNC | SND_LOOP);
+			PlaySound(TEXT("ë§ˆì´ì–´ìŠ¤ ì¶”ê²©ìŒ.wav"), NULL, SND_ASYNC | SND_LOOP);
 
-			//  Àç½ÃÀÛ½Ã ÃÊ±âÈ­ÇÒ °Íµé //
-			for (int i = 0; i < 10; i++) // NPC ÁÂÇ¥ ÃÊ±âÈ­
+			//  ì¬ì‹œì‘ì‹œ ì´ˆê¸°í™”í•  ê²ƒë“¤ //
+			for (int i = 0; i < 10; i++) // NPC ì¢Œí‘œ ì´ˆê¸°í™”
 			{
 				curPosX_ANPC[i] = 0;
 				curPosY_ANPC[i] = 0;
@@ -2799,9 +2799,9 @@ int main()
 				StageSet(num_BNPC, num_CNPC, num_DNPC);
 			}
 
-			while (1)   // °ÔÀÓÇÃ·¹ÀÌ while ¹®
+			while (1)   // ê²Œì„í”Œë ˆì´ while ë¬¸
 			{
-				if (gameover == 0 && stageclear == 0 && stage < 3)  // °ÔÀÓÁ¾·áµÉ¶§±îÁö µ¹¾Æ°¨
+				if (gameover == 0 && stageclear == 0 && stage < 3)  // ê²Œì„ì¢…ë£Œë ë•Œê¹Œì§€ ëŒì•„ê°
 				{
 					if (stage == 0)
 					{
@@ -2825,14 +2825,14 @@ int main()
 						Move_ANPC_DU(3, 7, 15);
 
 						Portal();
-						IncreaseNPC(num_BNPC, num_CNPC, num_DNPC);      // Á»ºñ Áõ½Ä
+						IncreaseNPC(num_BNPC, num_CNPC, num_DNPC);      // ì¢€ë¹„ ì¦ì‹
 					}
 
-					for (int b = 0; b < num_BNPC; b++) // bNPC ¿©·¯¸¶¸® ¼ÒÈ¯
+					for (int b = 0; b < num_BNPC; b++) // bNPC ì—¬ëŸ¬ë§ˆë¦¬ ì†Œí™˜
 						Move_BNPC(b);
-					for (int c = 0; c < num_CNPC; c++) // cNPC ¿©·¯¸¶¸® ¼ÒÈ¯
+					for (int c = 0; c < num_CNPC; c++) // cNPC ì—¬ëŸ¬ë§ˆë¦¬ ì†Œí™˜
 						Move_CNPC(c);
-					for (int d = 0; d < num_DNPC; d++) // dNPC ¿©·¯¸¶¸® ¼ÒÈ¯
+					for (int d = 0; d < num_DNPC; d++) // dNPC ì—¬ëŸ¬ë§ˆë¦¬ ì†Œí™˜
 						Move_DNPC(d);
 
 					PC_NPC_Collision();
@@ -2841,12 +2841,12 @@ int main()
 					NPC_Bomb_Collision();
 				}
 
-				else {   //°ÔÀÓ Á¾·áµÇ¾úÀ» ¶§
+				else {   //ê²Œì„ ì¢…ë£Œë˜ì—ˆì„ ë•Œ
 					break;
 				}
 			}
 
-			if (gameover == 1)   // °ÔÀÓ¿À¹ö½Ã
+			if (gameover == 1)   // ê²Œì„ì˜¤ë²„ì‹œ
 			{
 				GameOver();
 				score = 0;
@@ -2858,7 +2858,7 @@ int main()
 				opentest = 0;
 				break;
 			}
-			if (stage > 2)   // ÃÖÁ¾ °ÔÀÓ Å¬¸®¾î½Ã
+			if (stage > 2)   // ìµœì¢… ê²Œì„ í´ë¦¬ì–´ì‹œ
 			{
 				GameClear();
 				stage = 0;
@@ -2871,7 +2871,7 @@ int main()
 				opentest = 0;
 				break;
 			}
-			if (stageclear = 1)      // ½ºÅ×ÀÌÁö Å¬¸®¾î½Ã
+			if (stageclear = 1)      // ìŠ¤í…Œì´ì§€ í´ë¦¬ì–´ì‹œ
 			{
 				stageclear = 0;
 				num_gun = 0;

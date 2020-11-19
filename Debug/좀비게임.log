@@ -1,1 +1,9 @@
-﻿  좀비게임.vcxproj -> C:\Users\NB1\Desktop\재원대학\2학년2학기\소설기\좀비게임\Debug\좀비게임.exe
+﻿  메인.c
+C:\Users\NB1\Desktop\프로그램\GitWorkSpace\ZombieGame_2018\메인.c(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\NB1\Desktop\프로그램\GitWorkSpace\ZombieGame_2018\메인.c(277,2): warning C4045: 'story': 배열 범위에 오버플로가 발생했습니다.
+C:\Users\NB1\Desktop\프로그램\GitWorkSpace\ZombieGame_2018\메인.c(294,17): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\NB1\Desktop\프로그램\GitWorkSpace\ZombieGame_2018\메인.c(636,17): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\NB1\Desktop\프로그램\GitWorkSpace\ZombieGame_2018\메인.c(684,203): warning C4045: 'story': 배열 범위에 오버플로가 발생했습니다.
+C:\Users\NB1\Desktop\프로그램\GitWorkSpace\ZombieGame_2018\메인.c(1264,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\NB1\Desktop\프로그램\GitWorkSpace\ZombieGame_2018\메인.c(2611,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  좀비게임.vcxproj -> C:\Users\NB1\Desktop\프로그램\GitWorkSpace\ZombieGame_2018\Debug\좀비게임.exe
