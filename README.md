@@ -4,5 +4,5 @@
 
 <br>
 
-<img src= "cap1.png" height=350>
-<img src= "cap2.png" height=350>
+<img src= "cap1.png" width=1000 height=350>
+<img src= "cap2.png" width=1000 height=350>
