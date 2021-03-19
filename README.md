@@ -6,6 +6,10 @@
 
 <br>
 
-<img src= "cap1.png" width=1000 height=440>
-<img src= "cap2.png" width=800 height=300>
+
+<div align='center'>
+    <img src= "cap1.png" width=700 height=350>
+    <img src= "cap2.png" width=700 height=400>
+</div>
+
 
