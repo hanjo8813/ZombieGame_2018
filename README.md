@@ -8,8 +8,8 @@
 
 
 <div align='center'>
-    <img src= "cap1.png" width=700 height=350>
-    <img src= "cap2.png" width=700 height=400>
+    <img src= "cap1.png" width=700 height=400>
+    <img src= "cap2.png" width=700 height=350>
 </div>
 
 
