@@ -2,16 +2,24 @@
 
 ### C언어만으로 게임 구현하기
 
-> 아무것도 모르던 시절 만들었던 게임입니다.
+> 아무것도 모르던 시절 만들었던 게임입니다 (머쓱)
 
 <br>
 
-<div align='center'>
-    <img src= "cap1.png" width=700 height=400>
-    <h3>시작화면</h3>
-    <br>
-    <img src= "cap2.png" width=700 height=380>
-    <h3>게임화면</h3>
-</div>
+|<img src= "cap1.png" width=700 height=400>|
+|:--:|
+|**시작화면**|
+<br>
 
+|<img src= "cap2.png" width=700 height=380>|
+|:--:|
+|**게임화면**|
+
+<br>
+
+## 실행방법
+> (혹시라도) 직접 플레이해보고 싶다면?
+1. [>> 링크 <<](/Debug/좀비게임.exe)를 눌러 이동합니다.
+2. 위의 링크로 가서 우측의 `Download` 버튼을 누릅니다.
+3. 다운로드 후 `좀비게임.exe` 파일을 실행합니다.
 
