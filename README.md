@@ -8,10 +8,10 @@
 
 <div align='center'>
     <img src= "cap1.png" width=700 height=400>
-    <p>시작화면</p>
+    <h3>시작화면</h3>
     <br>
     <img src= "cap2.png" width=700 height=380>
-    <p>게임화면</p>
+    <h3>게임화면</h3>
 </div>
 
 
