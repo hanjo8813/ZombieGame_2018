@@ -1,9 +1,0 @@
-﻿  메인.cpp
-C:\Users\NB1\Desktop\재원대학\2학년2학기\소설기\좀비게임\메인.cpp(86,16): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
-C:\Users\NB1\Desktop\재원대학\2학년2학기\소설기\좀비게임\메인.cpp(86,19): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
-C:\Users\NB1\Desktop\재원대학\2학년2학기\소설기\좀비게임\메인.cpp(268,12): warning C4129: 'j': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
-C:\Users\NB1\Desktop\재원대학\2학년2학기\소설기\좀비게임\메인.cpp(268,12): warning C4129: 's': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
-C:\Users\NB1\Desktop\재원대학\2학년2학기\소설기\좀비게임\메인.cpp(268,12): warning C4129: 'g': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
-C:\Users\NB1\Desktop\재원대학\2학년2학기\소설기\좀비게임\메인.cpp(268,12): warning C4129: '':
-C:\Users\NB1\Desktop\재원대학\2학년2학기\소설기\좀비게임\메인.cpp(294,17): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  좀비게임.vcxproj -> C:\Users\NB1\Desktop\재원대학\2학년2학기\소설기\좀비게임\Debug\좀비게임.exe

@@ -265,7 +265,7 @@ void DrawCharacterboard(int sign)
 void printstory()
 {
 	system("cls");
-	PlaySound(TEXT("C:\Users\jisue\source\repos\game\game\키보드.wav"), NULL, SND_ASYNC);
+	PlaySound(L"sound/키보드.wav", NULL, SND_ASYNC);
 	char story[7][150] = {
 		{ "<게임 시나리오>" },
 	{ "인간의 과도한 유전자 조작으로 지구에는 좀비가 나타났다!" },
@@ -605,7 +605,7 @@ void PrintClear()
 }
 void GameClear()
 {
-	//PlaySound(TEXT("20 - eien no yami.wav"), NULL, SND_ASYNC);
+	PlaySound(L"sound/20 - eien no yami.wav", NULL, SND_ASYNC);
 	int key;
 	system("cls");
 	printf("게임 다 깼다!!!\n\n");
@@ -629,10 +629,8 @@ void GameClear()
 
 void GameOver()
 {
-	//PlaySound(TEXT("게임오버.wav"), NULL, SND_ASYNC);
-
+	PlaySound(L"sound/게임오버.wav", NULL, SND_ASYNC);
 	system("cls");
-
 	HANDLE hC = GetStdHandle(STD_OUTPUT_HANDLE);
 	int i, j, key;
 
@@ -2683,12 +2681,12 @@ int main()
 
 	while (1) // 제일 큰 while 문
 	{
-		//PlaySound(TEXT("ZHS Horror Infection.wav"), NULL, SND_ASYNC);
+		PlaySound(L"sound/ZHS Horror Infection.wav", NULL, SND_ASYNC);
 		DrawStartboard(sign);
 
 		while (1)
 		{
-			//PlaySound(TEXT("마이어스 추격음.wav"), NULL, SND_ASYNC | SND_LOOP);
+			PlaySound(L"sound/마이어스 추격음.wav", NULL, SND_ASYNC | SND_LOOP);
 
 			//  재시작시 초기화할 것들 //
 			for (int i = 0; i < 10; i++) // NPC 좌표 초기화
