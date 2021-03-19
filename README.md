@@ -6,10 +6,12 @@
 
 <br>
 
-
 <div align='center'>
     <img src= "cap1.png" width=700 height=400>
-    <img src= "cap2.png" width=700 height=350>
+    <p>시작화면</p>
+    <br>
+    <img src= "cap2.png" width=700 height=380>
+    <p>게임화면</p>
 </div>
 
 
