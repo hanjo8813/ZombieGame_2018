@@ -11,6 +11,11 @@
 |**시작화면**|
 <br>
 
+|<img src= "cap3.png" width=700 height=400>|
+|:--:|
+|**게임방법**|
+<br>
+
 |<img src= "cap2.png" width=700 height=380>|
 |:--:|
 |**게임화면**|
