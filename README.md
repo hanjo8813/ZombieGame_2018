@@ -6,19 +6,36 @@
 
 <br>
 
-|<img src= "cap1.png" width=700 height=400>|
+|<img src= "/img/1.png">|
 |:--:|
 |**시작화면**|
 <br>
 
-|<img src= "cap3.png" width=700 height=400>|
+|<img src= "/img/2.png">|
 |:--:|
-|**게임방법**|
+|**게임방법 설명**|
 <br>
 
-|<img src= "cap2.png" width=700 height=380>|
+|<img src= "/img/3.png">|
 |:--:|
-|**게임화면**|
+|**STAGE 1**|
+<br>
+
+|<img src= "/img/4.png">|
+|:--:|
+|**STAGE 2**|
+<br>
+
+|<img src= "/img/5.png">|
+|:--:|
+|**STAGE 3**|
+<br>
+
+|<img src= "/img/6.png">|
+|:--:|
+|**게임오버**|
+<br>
+
 
 <br>
 
